@@ -14,6 +14,9 @@
                 <li>Premios: <%= movies[i].awards %></li>
                 <li>Duración en minutos: <%= movies[i].length %></li>
                 <li>Fecha de Estreno: <%= movies[i].release_date %></li>
+                <li>Genero: <%= movies[i].genre_id %></li>
+                <li>Actores:</li>
+
             </ul>
         
         <a href="/movies/edit/<%= movies[i].id %>"><input type="submit" value="Editar" style="color:blue; border: 1px blue solid; width: 100px; height: 30px;"></a>

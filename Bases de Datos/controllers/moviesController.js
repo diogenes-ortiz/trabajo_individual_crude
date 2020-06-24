@@ -22,8 +22,11 @@ const moviesController = {
             res.render('detalleMovie', {movies: movies})
         });
     },
-    create: function(req, res, next){
-        res.render("crearMovie")
+    create: function(req, res, next) {
+        db.Genres.findAll()
+            .then(function(genres) {
+                res.render('crearMovie', {genres: genres})
+            })
     },
     cargar: function(req, res, next){
         db.Movies.create({
@@ -31,7 +34,8 @@ const moviesController = {
             rating: req.body.rating,
             awards: req.body.awards,
             length: req.body.length,
-            release_date: req.body.release_date
+            release_date: req.body.release_date,
+            genre_id: req.body.genre_id
         })
         .then(function(movies) {
             res.redirect('/movies')
