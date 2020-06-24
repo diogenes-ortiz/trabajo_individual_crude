@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de la Película</title>
+</head>
+<body>
+    <div class="container">
+        <% for (let i = 0; i < movies.length; i++) { %>
+            <h1><%= movies[i].title %></h1>
+            <ul>
+                <li>Rating: <%= movies[i].rating %></li>
+                <li>Premios: <%= movies[i].awards %></li>
+                <li>Duración en minutos: <%= movies[i].length %></li>
+                <li>Fecha de Estreno: <%= movies[i].release_date %></li>
+            </ul>
+        
+        <a href="/movies/edit/<%= movies[i].id %>"><input type="submit" value="Editar" style="color:blue; border: 1px blue solid; width: 100px; height: 30px;"></a>
+        <form action="/movies/delete/<%= movies[i].id %>" method="POST">
+        <button type="submit" value="" style="color: red; border: 1px red solid; width: 100px; height: 30px;">Eliminar</button>
+        </form>
+        <% } %>
+</div>
+</body>
+</html>

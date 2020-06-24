@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Película</title>
+</head>
+<body>
+    <h1>Editar Pelicula</h1>
+    <form action="/movies/edit/<%= movies.id %>" method="POST">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="<%= movies.title %>">
+    </div>
+    <div>
+        <label for="rating">Rating:</label>
+        <input type="number" name="rating" value="<%= movies.rating %>">
+    </div>
+    <div>
+        <label for="length">Length:</label>
+        <input type="number" name="length" value="<%= movies.length %>">
+    </div>
+    <div>
+        <label for="awards">Awards:</label>
+        <input type="number" name="awards" value="<%= movies.awards %>">
+    </div>
+    <div>
+        <label for="release_date">Release date:</label>
+        <input type="date" name="release_date" value="<%= movies.release_date %>">
+    </div>
+    <input type="submit" value="Editar">
+    <a href=""><input type="submit" value="Eliminar"></a>
+</form>
+</body>
+</html>

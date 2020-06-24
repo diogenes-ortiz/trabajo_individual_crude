@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pelicula</title>
+</head>
+<body>
+    <h1>Crear Pelicula</h1>
+    <form action="/movies/create" method="POST">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title">
+    </div>
+    <div>
+        <label for="rating">Rating:</label>
+        <input type="number" step="0.1" name="rating">
+    </div>
+    <div>
+        <label for="awards">Awards:</label>
+        <input type="number" name="awards">
+    </div>
+    <div>
+        <label for="length">Length:</label>
+        <input type="number" name="length">
+    </div>
+    <div>
+        <label for="release_date">Release date:</label>
+        <input type="date" name="release_date">
+    </div>
+    <input type="submit" value="Crear">
+</form>
+</body>
+</html>
